@@ -12,17 +12,18 @@ export default async function FavoriteArticle({ id }: { id: string }) {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
   
   if (!response.ok) {
-    return <div>Помилка завантаження статті {id}</div>;
+    return <div className="p-6 border border-rose-200 bg-rose-50 text-rose-600 rounded-2xl">Помилка завантаження статті {id}</div>;
   }
 
   const post: Post = await response.json();
 
   return (
-    <div style={{ border: "2px solid #10b981", padding: "1rem", borderRadius: "8px", backgroundColor: "#ecfdf5" }}>
-      <h3 style={{ fontSize: "18px", fontWeight: "bold", color: "#047857", textTransform: "capitalize" }}>
-        Улюблена стаття #{post.id}: {post.title}
+    <div className="bg-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md hover:border-purple-200 transition-all">
+      <h3 className="text-xl font-semibold text-slate-800 capitalize mb-3">
+        <span className="text-[#832C96] mr-2">#{post.id}</span>
+        {post.title}
       </h3>
-      <p style={{ color: "#065f46", marginTop: "0.5rem" }}>{post.body}</p>
+      <p className="text-slate-600 leading-relaxed">{post.body}</p>
     </div>
   );
 }

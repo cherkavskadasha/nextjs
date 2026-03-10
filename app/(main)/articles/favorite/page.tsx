@@ -3,19 +3,19 @@ import FavoriteArticle from "../../../../components/FavoriteArticle";
 
 export default function FavoriteArticlesPage() {
   return (
-    <div>
-      <h1 style={{ fontSize: "24px", fontWeight: "bold", marginBottom: "1.5rem" }}>Улюблені статті</h1>
+    <div className="max-w-4xl">
+      <h1 className="text-3xl font-bold text-slate-800 mb-8">Улюблені статті</h1>
       
-      <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-        <Suspense fallback={<div style={{ padding: "1rem", border: "2px dashed #9ca3af", borderRadius: "8px", color: "#6b7280" }}>⏳ Завантаження статті 1...</div>}>
+      <div className="flex flex-col gap-6">
+        <Suspense fallback={<div className="p-6 border-2 border-dashed border-purple-200 rounded-2xl text-[#832C96] font-medium text-center bg-purple-50/50">⏳ Завантаження статті 1...</div>}>
           <FavoriteArticle id="1" />
         </Suspense>
 
-        <Suspense fallback={<div style={{ padding: "1rem", border: "2px dashed #9ca3af", borderRadius: "8px", color: "#6b7280" }}>⏳ Завантаження статті 2...</div>}>
+        <Suspense fallback={<div className="p-6 border-2 border-dashed border-purple-200 rounded-2xl text-[#832C96] font-medium text-center bg-purple-50/50">⏳ Завантаження статті 2...</div>}>
           <FavoriteArticle id="2" />
         </Suspense>
 
-        <Suspense fallback={<div style={{ padding: "1rem", border: "2px dashed #9ca3af", borderRadius: "8px", color: "#6b7280" }}>⏳ Завантаження статті 3...</div>}>
+        <Suspense fallback={<div className="p-6 border-2 border-dashed border-purple-200 rounded-2xl text-[#832C96] font-medium text-center bg-purple-50/50">⏳ Завантаження статті 3...</div>}>
           <FavoriteArticle id="3" />
         </Suspense>
       </div>

@@ -2,9 +2,10 @@ import ArticlesMenu from "../../../components/ArticlesMenu";
 
 export default function ArticlesLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <div className="flex flex-col">
       <ArticlesMenu />
-      <div style={{ marginTop: "1rem" }}>
+      
+      <div className="mt-8">
         {children}
       </div>
     </div>

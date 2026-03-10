@@ -21,7 +21,6 @@ export async function generateStaticParams() {
 }
 
 export default async function SingleArticlePage({ params }: { params: Promise<{ id: string }> }) {
-
   const resolvedParams = await params;
   const id = resolvedParams.id;
 
@@ -38,28 +37,31 @@ export default async function SingleArticlePage({ params }: { params: Promise<{ 
   const comments: Comment[] = await commentsResponse.json();
 
   return (
-    <div>
-      <article style={{ borderBottom: "2px solid #e5e7eb", paddingBottom: "2rem", marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "28px", fontWeight: "bold", textTransform: "capitalize", marginBottom: "1rem" }}>
-          {post.id}. {post.title}
+    <div className="w-full bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 mb-20">
+      <article className="border-b-2 border-slate-100 pb-8 mb-8">
+        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-purple-50 text-[#832C96] text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+          Стаття №{post.id}
+        </div>
+        <h1 className="text-4xl font-bold text-slate-900 capitalize mb-6 leading-tight">
+          {post.title}
         </h1>
-        <p style={{ fontSize: "18px", lineHeight: "1.6", color: "#374151" }}>
+        <p className="text-lg text-slate-600 leading-relaxed">
           {post.body}
         </p>
       </article>
 
       <section>
-        <h2 style={{ fontSize: "22px", fontWeight: "bold", marginBottom: "1rem" }}>
+        <h2 className="text-2xl font-bold text-slate-800 mb-6">
           Коментарі ({comments.length})
         </h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+        <div className="flex flex-col gap-5">
           {comments.map((comment) => (
-            <div key={comment.id} style={{ padding: "1rem", backgroundColor: "#f9fafb", borderRadius: "8px" }}>
-              <h3 style={{ fontSize: "16px", fontWeight: "bold" }}>{comment.name}</h3>
-              <span style={{ fontSize: "14px", color: "#6b7280", display: "block", marginBottom: "0.5rem" }}>
+            <div key={comment.id} className="p-6 bg-slate-100 rounded-2xl border border-slate-200">
+              <h3 className="text-lg font-semibold text-slate-800">{comment.name}</h3>
+              <span className="text-sm text-[#832C96] block mb-3 font-medium">
                 {comment.email}
               </span>
-              <p style={{ fontSize: "15px", color: "#4b5563" }}>{comment.body}</p>
+              <p className="text-slate-600 leading-relaxed">{comment.body}</p>
             </div>
           ))}
         </div>

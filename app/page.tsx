@@ -1,16 +1,37 @@
 import Link from "next/link";
+import EnvLogger from "../components/EnvLogger";
 
 export default function HomePage() {
+  console.log("СЕРВЕРНА КОНСОЛЬ:");
+  console.log("Секретна змінна:", process.env.SECRET_SERVER_KEY);
+  console.log("Публічна змінна:", process.env.NEXT_PUBLIC_APP_NAME);
+
   return (
     <main className="min-h-screen bg-[#E9D0E9] p-6 flex flex-col items-center justify-center">
+      <EnvLogger />
+      
       <div className="bg-white p-12 rounded-[2.5rem] shadow-xl shadow-purple-200/50 max-w-lg w-full text-center border border-white">
         <h1 className="text-3xl font-bold text-slate-800 mb-4">
-          Лабораторна робота №1
+          Лабораторна робота №2
         </h1>
-        <p className="text-slate-500 mb-10 leading-relaxed">
-          Сучасний мінімалістичний інтерфейс. <br/> 
-          Побудовано на Next.js та Tailwind CSS.
+        <p className="text-slate-500 mb-8">
+          Тестування змінних середовища
         </p>
+        
+        <div className="bg-slate-50 p-5 rounded-2xl text-left mb-10 border border-slate-100">
+          <div className="mb-4">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#832C96]">Публічна змінна:</span> 
+            <p className="font-mono text-sm mt-1 text-slate-700">
+              {process.env.NEXT_PUBLIC_APP_NAME || "Не знайдено"}
+            </p>
+          </div>
+          <div>
+            <span className="text-xs font-bold uppercase tracking-wider text-rose-500">Секретна змінна:</span> 
+            <p className="font-mono text-sm mt-1 text-slate-700">
+              {process.env.SECRET_SERVER_KEY ? "Доступна на сервері (прихована від клієнта)" : "Не знайдено"}
+            </p>
+          </div>
+        </div>
         
         <Link 
           href="/articles" 

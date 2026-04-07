@@ -30,3 +30,18 @@ export async function DELETE(request: Request, { params }: { params: Promise<{ i
     return NextResponse.json({ error: 'Помилка видалення статті' }, { status: 500 });
   }
 }
+
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  try {
+    const { id } = await params;
+    const article = await prisma.article.findUnique({
+      where: { id: parseInt(id) },
+    });
+    
+    if (!article) return NextResponse.json({ error: 'Статтю не знайдено' }, { status: 404 });
+    
+    return NextResponse.json(article);
+  } catch (error) {
+    return NextResponse.json({ error: 'Помилка завантаження' }, { status: 500 });
+  }
+}

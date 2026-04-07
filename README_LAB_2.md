@@ -45,8 +45,17 @@
 - Створено React-компонент (`ApiTester.tsx`) для виконання GET-запитів до API безпосередньо з фронтенду сторінки.
 
 **Скріншоти результатів:**
-- Тестування в Postman (GET): `screenshots/lab-2/6.png`
-- Тестування в Postman (POST): `screenshots/lab-2/7.png`
-- Тестування в Postman (PATCH): `screenshots/lab-2/8.png`
-- Тестування в Postman (DELETE): `screenshots/lab-2/9.png`
-- Виклик API з фронтенду (браузер + Network): `screenshots/lab-2/10.png`
+Тестування в Postman (GET):
+![Postman GET](./screenshots/lab-2/6.png)
+
+Тестування в Postman (POST):
+![Postman POST](./screenshots/lab-2/7.png)
+
+Тестування в Postman (PATCH):
+![Postman PATCH](./screenshots/lab-2/8.png)
+
+Тестування в Postman (DELETE):
+![Postman DELETE](./screenshots/lab-2/9.png)
+
+Виклик API з фронтенду (браузер + Network):
+![API Frontend](./screenshots/lab-2/10.png)

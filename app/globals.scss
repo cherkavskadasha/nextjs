@@ -6,7 +6,7 @@
   --color-border: #e5e7eb;       
   --color-text-muted: #64748b;   
   --color-text-main: #1e293b;    
-  --color-accent: #6366f1;    
+  --color-accent: #832C96;    
   
   --breakpoint-tablet: 850px;
   --breakpoint-desktop: 1440px;
@@ -15,5 +15,11 @@
 body {
   background-color: var(--color-canvas);
   color: var(--color-text-main);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
 }

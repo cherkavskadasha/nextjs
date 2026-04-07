@@ -1,5 +1,6 @@
 import Link from "next/link";
 import EnvLogger from "../components/EnvLogger";
+import ApiTester from "../components/ApiTester"; // <-- Додали імпорт
 
 export default function HomePage() {
   console.log("СЕРВЕРНА КОНСОЛЬ:");
@@ -15,10 +16,10 @@ export default function HomePage() {
           Лабораторна робота №2
         </h1>
         <p className="text-slate-500 mb-8">
-          Тестування змінних середовища
+          Тестування змінних середовища та API
         </p>
         
-        <div className="bg-slate-50 p-5 rounded-2xl text-left mb-10 border border-slate-100">
+        <div className="bg-slate-50 p-5 rounded-2xl text-left mb-8 border border-slate-100">
           <div className="mb-4">
             <span className="text-xs font-bold uppercase tracking-wider text-[#832C96]">Публічна змінна:</span> 
             <p className="font-mono text-sm mt-1 text-slate-700">
@@ -35,10 +36,13 @@ export default function HomePage() {
         
         <Link 
           href="/articles" 
-          className="inline-block px-10 py-4 bg-[#832C96] text-white font-bold rounded-2xl hover:bg-[#A73BBF] transition-all duration-300 shadow-lg shadow-purple-300/50"
+          className="inline-block px-10 py-4 bg-[#832C96] w-full text-white font-bold rounded-2xl hover:bg-[#A73BBF] transition-all duration-300 shadow-lg shadow-purple-300/50"
         >
           Перейти до статей
         </Link>
+
+        <ApiTester />
+        
       </div>
     </main>
   );

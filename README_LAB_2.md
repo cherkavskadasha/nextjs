@@ -34,4 +34,19 @@
 - Успішно виконано синхронізацію (`db push`) та наповнення (`db seed`) dev-бази.
 
 **Скріншот наповнення Dev-бази:**
-![Dev DB Seed](./screenshots/lab-2/5-dev-db.png)
+![Dev DB Seed](./screenshots/lab-2/5.png)
+
+---
+
+## Завдання 4. Створення API ендпоінтів
+- Створено повноцінний CRUD API (маршрути `GET`, `POST`, `PATCH`, `DELETE`) за допомогою Next.js App Router (`app/api/articles/route.ts` та `app/api/articles/[id]/route.ts`).
+- Налаштовано глобальний клієнт Prisma (`lib/prisma.ts`) для стабільної роботи в режимі розробки.
+- API успішно протестовано без фронтенду за допомогою Postman.
+- Створено React-компонент (`ApiTester.tsx`) для виконання GET-запитів до API безпосередньо з фронтенду сторінки.
+
+**Скріншоти результатів:**
+- Тестування в Postman (GET): `screenshots/lab-2/6.png`
+- Тестування в Postman (POST): `screenshots/lab-2/7.png`
+- Тестування в Postman (PATCH): `screenshots/lab-2/8.png`
+- Тестування в Postman (DELETE): `screenshots/lab-2/9.png`
+- Виклик API з фронтенду (браузер + Network): `screenshots/lab-2/10.png`

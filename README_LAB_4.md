@@ -21,3 +21,12 @@
 ![Playwright Tests](./screenshots/lab4/2.png)
 
 ---
+
+## Завдання 4. Налаштування GitHub Workflow
+- Оновлено автоматизований пайплайн (CI) у файлі `.github/workflows/playwright.yml`.
+- Налаштовано послідовний запуск юніт-тестів (Jest) та e2e тестів (Playwright) при кожному push/pull_request.
+- Додано `continue-on-error: true` для кроку Jest, щоб дозволити виконання e2e тестів навіть при недосягненні порогу покриття у 40%.
+- Налаштовано автоматичний запуск локального сервера (`npm run dev`) силами Playwright перед початком e2e тестування.
+
+**Скріншот успішного виконання GitHub Actions:**
+![GitHub Actions](./screenshots/lab4/3.png)

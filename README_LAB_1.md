@@ -8,7 +8,8 @@
 - Використано глобальні стилі (`globals.scss`, `_variables.scss`, `_typography.scss`).
 
 **Скріншот структури проєкту:**
-![Структура проєкту](./screenshots/lab1/1.png)
+
+![Структура проєкту](screenshots/lab1/1.png)
 
 ---
 
@@ -18,7 +19,8 @@
 - Додано функціонал підсвічування активного пункту меню (як головного, так і підменю).
 
 **Скріншот активного меню (головне меню):**
-![Навігація](./screenshots/lab1/2.png)
+
+![Навігація](screenshots/lab1/2.png)
 
 ---
 
@@ -30,14 +32,22 @@
 - **Static Site Generation (SSG):** Налаштовано статичну генерацію (через `generateStaticParams`) для статей з ID від 1 до 10 під час білду.
 
 **Скріншоти:**
+
 - Стан завантаження: 
-![Loading](./screenshots/lab1/3.png)
+
+![Loading](screenshots/lab1/3.png)
+
 - Улюблені статті (3 окремі запити): 
-![Favorites](./screenshots/lab1/4.png)
+
+![Favorites](screenshots/lab1/4.png)
+
 - Динамічна сторінка статті з коментарями: 
-![Dynamic Route](./screenshots/lab1/5.png)
+
+![Dynamic Route](screenshots/lab1/5.png)
+
 - SSG Білд у терміналі (видно генерацію сторінок 1-10): 
-![Build](./screenshots/lab1/6.png)
+
+![Build](screenshots/lab1/6.png)
 
 ---
 
@@ -47,4 +57,5 @@
 - Картки статей гармонійно стилізовані з використанням ефектів наведення та тіней.
 
 **Скріншот стилізації компонентів:**
-![Styling](./screenshots/lab1/7.png)
+
+![Styling](screenshots/lab1/7.png)
